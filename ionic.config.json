@@ -1,0 +1,7 @@
+{
+  "name": "api-naruto",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
