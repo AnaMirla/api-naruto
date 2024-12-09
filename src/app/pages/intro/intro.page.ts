@@ -13,7 +13,7 @@ export class IntroPage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.router.navigateByUrl('/home')
-    }, 4000)
+    }, 7000)
   }
 
 }
