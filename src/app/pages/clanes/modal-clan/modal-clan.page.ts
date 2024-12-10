@@ -1,15 +1,15 @@
 import { Component, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
-// Define el tipo ClanData que tiene claves específicas de clanes con sus personajes
+// Define el tipo ClanData para que contenga objetos con más información sobre los personajes
 type ClanData = {
-  Aburame: string[];
-  Uchiha: string[];
-  Senju: string[];
-  Uzumaki: string[];
-  Hyuga: string[];
+  Aburame: { name: string; image: string }[];
+  Uchiha: { name: string; image: string }[];
+  Senju: { name: string; image: string }[];
+  Uzumaki: { name: string; image: string }[];
+  Hyuga: { name: string; image: string }[];
 };
 
-// Define el tipo específico para el clan, limitando las claves válidas
 type Clan = 'Aburame' | 'Uchiha' | 'Senju' | 'Uzumaki' | 'Hyuga';
 
 @Component({
@@ -18,20 +18,38 @@ type Clan = 'Aburame' | 'Uchiha' | 'Senju' | 'Uzumaki' | 'Hyuga';
   styleUrls: ['./modal-clan.page.scss'],
 })
 export class ModalClanPage {
-
-  @Input() clan: Clan = 'Aburame';  // Asignar un valor predeterminado del tipo Clan
+  @Input() clan: Clan = 'Aburame';
 
   clanData: ClanData = {
-    Aburame: ['Shino Aburame', 'Kikka Aburame'],
-    Uchiha: ['Sasuke Uchiha', 'Itachi Uchiha'],
-    Senju: ['Hashirama Senju', 'Tobirama Senju'],
-    Uzumaki: ['Naruto Uzumaki', 'Kushina Uzumaki'],
-    Hyuga: ['Hinata Hyuga', 'Neji Hyuga']
+    Aburame: [
+      { name: 'Shino Aburame', image: 'assets/clanes/Aburame/shino.png' },
+      { name: 'Muta Aburame', image: 'assets/clanes/Aburame/muta.jpg' },
+    ],
+    Uchiha: [
+      { name: 'Itachi Uchiha', image: 'assets/clanes/Uchiha/itachi.png' },
+      { name: 'Sasuke Uchiha', image: 'assets/clanes/Uchiha/Sasuke.jpg' },
+    ],
+    Senju: [
+      { name: 'Hashirama Senju', image: 'assets/clanes/Senju/Hashirama.jpg' },
+      { name: 'Tobirama Senju', image: 'assets/clanes/Senju/Tobirama.jpg' },
+    ],
+    Uzumaki: [
+      { name: 'Naruto Uzumaki', image: 'assets/clanes/Uzumukai/Naruto.jpg' },
+      { name: 'Kushina Uzumaki', image: 'assets/clanes/Uzumukai/Kushina.jpg'},
+    ],
+    Hyuga: [
+      { name: 'Hinata Hyuga', image: 'assets/clanes/Hyuga/Hinata.jpg' },
+      { name: 'Neji Hyuga', image: 'assets/clanes/Hyuga/Neji.jpg' },
+    ],
   };
 
-  constructor() { }
+  constructor(private modalController: ModalController) {}
 
   getCharacters() {
-    return this.clanData[this.clan] || [];  // Ahora TypeScript sabe que 'this.clan' es un valor válido
+    return this.clanData[this.clan] || [];
+  }
+
+  dismissModal() {
+    this.modalController.dismiss();
   }
 }

@@ -1,14 +1,39 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>Clanes</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-    <ion-list>
-      <ion-item button *ngFor="let clan of clans" (click)="openClanModal(clan)">
-        <ion-label>{{ clan }}</ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-  
+  <ion-toolbar>
+    <ion-title>Clanes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="clanes-container">
+    <!-- Card Clan Aburame -->
+    <div class="clan-card" (click)="openClanModal('Aburame')">
+      <img src="assets/clanes/aburame.png" alt="Clan Aburame">
+      <h3>Clan Aburame</h3>
+    </div>
+
+    <!-- Card Clan Uchiha -->
+    <div class="clan-card" (click)="openClanModal('Uchiha')">
+      <img src="assets/clanes/Uchiha/symbol.png" alt="Clan Uchiha">
+      <h3>Clan Uchiha</h3>
+    </div>
+
+    <!-- Card Clan Senju -->
+    <div class="clan-card" (click)="openClanModal('Senju')">
+      <img src="assets/clanes/Senju/symbol.png" alt="Clan Senju">
+      <h3>Clan Senju</h3>
+    </div>
+
+    <!-- Card Clan Uzumaki -->
+    <div class="clan-card" (click)="openClanModal('Uzumaki')">
+      <img src="assets/clanes/Uzumukai/symbol.png" alt="Clan Uzumaki">
+      <h3>Clan Uzumaki</h3>
+    </div>
+
+    <!-- Card Clan Hyuga -->
+    <div class="clan-card" (click)="openClanModal('Hyuga')">
+      <img src="assets/clanes/Hyuga/symbol.png" alt="Clan Hyuga">
+      <h3>Clan Hyuga</h3>
+    </div>
+  </div>
+</ion-content>
