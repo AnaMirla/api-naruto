@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ character.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="modal-content">
+    <img [src]="character.image || 'assets/default-image.png'" alt="{{ character.name }}">
+    <h3>Clan: {{ character.clan || 'Desconocido' }}</h3>
+    <p>Estado: {{ character.status }}</p>
+  </div>
+</ion-content>

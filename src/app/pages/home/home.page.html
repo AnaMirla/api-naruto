@@ -13,16 +13,18 @@
   <!-- Contenedor de tarjetas -->
   <div class="div-container">
     <div class="div-card">
-      <div class="card">
-        <img src="./characters/naruto.jpg" alt="Imagen Personaje">
+      <!-- Tarjeta para Itama Senju -->
+      <div class="card" [routerLink]="['/character-detail']" [queryParams]="{ id: 1 }">
+        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
         <div class="card-content">
           <h2>Itama Senju</h2>
           <p>🟥 Dead<br>Clan: Senju</p>
         </div>
       </div>
 
-      <div class="card">
-        <img src="./characters/naruto.jpg" alt="Imagen Personaje">
+      <!-- Tarjeta para Seiren Funato -->
+      <div class="card" [routerLink]="['/character-detail']" [queryParams]="{ id: 2 }">
+        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
         <div class="card-content">
           <h2>Seiren Funato</h2>
           <p>🟥 Dead<br>Clan: Funato</p>
@@ -33,22 +35,31 @@
 
   <div class="div-container">
     <div class="div-card">
-      <div class="card">
-        <img src="./characters/naruto.jpg" alt="Imagen Personaje">
+      <!-- Otra tarjeta para Itama Senju -->
+      <div class="card" [routerLink]="['/character-detail']" [queryParams]="{ id: 3 }">
+        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
         <div class="card-content">
           <h2>Itama Senju</h2>
           <p>🟥 Dead<br>Clan: Senju</p>
         </div>
       </div>
 
-      <div class="card">
-        <img src="./characters/naruto.jpg" alt="Imagen Personaje">
+      <!-- Otra tarjeta para Seiren Funato -->
+      <div class="card" [routerLink]="['/character-detail']" [queryParams]="{ id: 4 }">
+        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
         <div class="card-content">
           <h2>Seiren Funato</h2>
           <p>🟥 Dead<br>Clan: Funato</p>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Botón para ir a la pantalla de introducción -->
+  <div class="div-container">
+    <ion-button routerLink="/character-detail" fill="clear" expand="block">
+      Ver Todos los Personajes
+    </ion-button>
   </div>
 </ion-content>
 

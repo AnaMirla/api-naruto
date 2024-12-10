@@ -1,0 +1,18 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Naruto Uzumaki",
+      "image": "https://ibb.co/x7NzR8q",
+      "clan": "Uzumaki",
+      "status": "Alive"
+    },
+    {
+      "id": 2,
+      "name": "Sasuke Uchiha",
+      "image": "https://ibb.co/x7NzR8q",
+      "clan": "Uchiha",
+      "status": "Alive"
+    }
+  ]
+}
