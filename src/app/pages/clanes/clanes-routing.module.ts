@@ -5,12 +5,12 @@ import { ClanesPage } from './clanes.page';
 const routes: Routes = [
   {
     path: '',
-    component: ClanesPage
-  }
+    component: ClanesPage,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ClanesPageRoutingModule {}

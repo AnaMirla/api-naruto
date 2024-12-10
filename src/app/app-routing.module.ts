@@ -9,19 +9,27 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
   {
     path: 'character-detail',
-    loadChildren: () => import('./pages/character-detail/character-detail.module').then( m => m.CharacterDetailPageModule)
+    loadChildren: () =>
+      import('./pages/character-detail/character-detail.module').then(
+        m => m.CharacterDetailPageModule
+      )
   },
   {
     path: 'intro',
-    loadChildren: () => import('./pages/intro/intro.module').then( m => m.IntroPageModule)
+    loadChildren: () => import('./pages/intro/intro.module').then(m => m.IntroPageModule)
   },
   {
     path: 'clanes',
-    loadChildren: () => import('./pages/clanes/clanes.module').then( m => m.ClanesPageModule)
+    loadChildren: () => import('./pages/clanes/clanes.module').then(m => m.ClanesPageModule)
+  },
+  // Ruta para manejar páginas no encontradas (opcional).
+  {
+    path: '**',
+    redirectTo: 'intro',
   },
 ];
 
@@ -31,4 +39,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

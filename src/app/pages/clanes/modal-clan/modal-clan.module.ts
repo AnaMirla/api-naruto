@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular'; // Asegúrate de importar esto
 import { ModalClanPage } from './modal-clan.page';
-import { IonicModule } from '@ionic/angular';
-import { ModalClanPageRoutingModule } from './modal-clan-routing.module';  // Importamos las rutas
 
 @NgModule({
+  declarations: [ModalClanPage],
   imports: [
-    CommonModule,  // Necesario para usar directivas como ngIf, ngFor
-    IonicModule,   // Necesario para los componentes de Ionic como ion-card, ion-button, etc.
-    ModalClanPageRoutingModule  // Importamos las rutas configuradas
+    CommonModule,
+    FormsModule,
+    IonicModule, // Inclúyelo aquí
   ],
-  declarations: [ModalClanPage],  // Declaramos el componente
-  exports: [ModalClanPage]  // Exportamos el componente para que pueda ser utilizado
 })
 export class ModalClanPageModule {}
