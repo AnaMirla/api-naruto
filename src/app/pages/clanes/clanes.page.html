@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Clanes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item button *ngFor="let clan of clans" (click)="openClanModal(clan)">
+        <ion-label>{{ clan }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

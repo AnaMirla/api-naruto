@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Clan {{ clan }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Personajes del Clan {{ clan }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ul>
+        <li *ngFor="let character of getCharacters()">
+          {{ character }}
+        </li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
