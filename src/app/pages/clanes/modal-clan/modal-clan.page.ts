@@ -23,7 +23,7 @@ export class ModalClanPage {
   clanData: ClanData = {
     Aburame: [
       { name: 'Shino Aburame', image: 'assets/clanes/Aburame/shino.png' },
-      { name: 'Muta Aburame', image: 'assets/clanes/Aburame/muta.jpg' },
+      { name: 'Muta Aburame', image: 'assets/clanes/Aburame/Muta.jpg' },
     ],
     Uchiha: [
       { name: 'Itachi Uchiha', image: 'assets/clanes/Uchiha/itachi.png' },

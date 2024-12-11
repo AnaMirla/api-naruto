@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Akatsuki Members</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="members-container">
+    <div class="member-card" *ngFor="let member of akatsukiMembers" (click)="openModal(member)">
+      <img [src]="member.image" alt="{{ member.name }}">
+      <h3>{{ member.name }}</h3>
+      <p>{{ member.clan }}</p>
+    </div>
+  </div>
+</ion-content>

@@ -26,10 +26,21 @@ const routes: Routes = [
     path: 'clanes',
     loadChildren: () => import('./pages/clanes/clanes.module').then(m => m.ClanesPageModule)
   },
-  // Ruta para manejar páginas no encontradas (opcional).
+  {
+    path: 'kara',
+    loadChildren: () => import('./pages/kara/kara.module').then(m => m.KaraPageModule)
+  },
+  {
+    path: 'akatsuki',
+    loadChildren: () => import('./pages/akatsuki/akatsuki.module').then(m => m.AkatsukiPageModule)
+  },
   {
     path: '**',
     redirectTo: 'intro',
+  },
+  {
+    path: 'kekkei-genkai',
+    loadChildren: () => import('./pages/kekkei-genkai/kekkei-genkai.module').then( m => m.KekkeiGenkaiPageModule)
   },
 ];
 

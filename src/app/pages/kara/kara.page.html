@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kara</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cards-container">
+    <ion-card *ngFor="let member of karaMembers" (click)="openModal(member)">
+      <img [src]="member.image" alt="{{ member.name }}">
+      <ion-card-header>
+        <ion-card-title>{{ member.name }}</ion-card-title>
+        <p>Clan: {{ member.clan }}</p>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>
