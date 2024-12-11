@@ -34,7 +34,7 @@ export class ModalClanPage {
       { name: 'Tobirama Senju', image: 'assets/clanes/naruto/senju/tobirama.jpg' },
     ],
     Uzumaki: [
-      { name: 'Naruto Uzumaki', image: 'assets/clanes/Uzumukai/Naruto.jpg' },
+      { name: 'Naruto Uzumaki', image: 'assets/characters/naruto.jpg' },
       { name: 'Kushina Uzumaki', image: 'assets/clanes/naruto/kushina uzumaki.png'},
     ],
     Hyuga: [
