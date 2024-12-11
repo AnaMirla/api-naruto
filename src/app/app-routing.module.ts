@@ -38,7 +38,10 @@ const routes: Routes = [
     path: 'kekkei-genkai',
     loadChildren: () => import('./pages/kekkei-genkai/kekkei-genkai.module').then(m => m.KekkeiGenkaiPageModule)
   },
-  // Ruta para manejar páginas no encontradas (opcional).
+  {
+    path: 'tailed-beats',
+    loadChildren: () => import('./pages/tailed-beats/tailed-beats.module').then(m => m.TailedBeatsPageModule)
+  },
   {
     path: '**',
     redirectTo: 'intro',

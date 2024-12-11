@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tailed Beats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let bestia of bestiasList">
+        <ion-card (click)="openModal(bestia)">
+          <img [src]="bestia.image" alt="{{ bestia.name }}">
+          <ion-card-header>
+            <ion-card-title>{{ bestia.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ bestia.description }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
