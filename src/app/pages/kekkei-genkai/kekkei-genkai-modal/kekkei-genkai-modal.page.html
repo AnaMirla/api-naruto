@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ kekkei.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img [src]="kekkei.image" alt="{{ kekkei.name }}">
+    <ion-card-content>
+      <p>{{ kekkei.description }}</p>
+      <h2>Usuarios:</h2>
+      <ion-list>
+        <ion-item *ngFor="let user of kekkei.users">
+          <ion-avatar slot="start">
+            <img [src]="user.image" alt="{{ user.name }}">
+          </ion-avatar>
+          <ion-label>
+            <h3>{{ user.name }}</h3>
+            <p>Clan: {{ user.clan }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

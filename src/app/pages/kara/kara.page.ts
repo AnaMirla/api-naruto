@@ -9,11 +9,11 @@ import { KaraModalPage } from './kara-modal/kara-modal.page';
 })
 export class KaraPage {
   karaMembers = [
-    { name: 'Jigen', image: 'assets/kara/jigen.jpg', clan: 'Kara' },
-    { name: 'Kashin Koji', image: 'assets/kara/kashin-koji.jpg', clan: 'Kara' },
-    { name: 'Delta', image: 'assets/kara/delta.jpg', clan: 'Kara' },
-    { name: 'Amado', image: 'assets/kara/amado.jpg', clan: 'Kara' },
-    { name: 'Boro', image: 'assets/kara/boro.jpg', clan: 'Kara' }
+    { name: 'Jigen', image: 'assets/clanes/naruto/kara/jigen.jpg', clan: 'Kara' },
+    { name: 'Kashin Koji', image: 'assets/clanes/naruto/kara/kashin koji.jpg', clan: 'Kara' },
+    { name: 'Delta', image: 'assets/clanes/naruto/kara/delta.jpg', clan: 'Kara' },
+    { name: 'Amado', image: 'assets/clanes/naruto/kara/amado.jpg', clan: 'Kara' },
+    { name: 'Boro', image: 'assets/clanes/naruto/kara/boro.jpg', clan: 'Kara' }
   ];
 
   constructor(private modalController: ModalController) {}

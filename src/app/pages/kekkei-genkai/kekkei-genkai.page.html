@@ -1,13 +1,19 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>kekkei-genkai</ion-title>
+    <ion-title>Kekkei Genkai</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">kekkei-genkai</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="cards-container">
+    <ion-card *ngFor="let kekkei of kekkeiGenkaiList" (click)="openModal(kekkei)">
+      <img [src]="kekkei.image" alt="{{ kekkei.name }}">
+      <ion-card-header>
+        <ion-card-title>{{ kekkei.name }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ kekkei.description }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

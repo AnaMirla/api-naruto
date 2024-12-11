@@ -35,12 +35,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/akatsuki/akatsuki.module').then(m => m.AkatsukiPageModule)
   },
   {
+    path: 'kekkei-genkai',
+    loadChildren: () => import('./pages/kekkei-genkai/kekkei-genkai.module').then(m => m.KekkeiGenkaiPageModule)
+  },
+  // Ruta para manejar páginas no encontradas (opcional).
+  {
     path: '**',
     redirectTo: 'intro',
-  },
-  {
-    path: 'kekkei-genkai',
-    loadChildren: () => import('./pages/kekkei-genkai/kekkei-genkai.module').then( m => m.KekkeiGenkaiPageModule)
   },
 ];
 
