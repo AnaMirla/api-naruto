@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ team.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Contenedor para el líder -->
+  <div class="leader-container">
+    <div class="leader-title">Líder: {{ team.leader }}</div>
+    <img class="leader-image" [src]="team.image" alt="{{ team.leader }}" />
+    <div class="leader-name">{{ team.leader }}</div>
+  </div>
+
+  <!-- Título para los integrantes -->
+  <div class="integrants-title">Integrantes</div>
+
+  <!-- Contenedor de los miembros -->
+  <div class="characters-container">
+    <div class="character-card" *ngFor="let member of team.members">
+      <img [src]="member.image" alt="{{ member.name }}" />
+      <h3>{{ member.name }}</h3>
+    </div>
+  </div>
+</ion-content>

@@ -43,9 +43,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/tailed-beats/tailed-beats.module').then(m => m.TailedBeatsPageModule)
   },
   {
+    path: 'teams',
+    loadChildren: () => import('./pages/teams/teams.module').then(m => m.TeamsPageModule)
+  },
+  {
     path: '**',
     redirectTo: 'intro',
-  },
+  }
 ];
 
 @NgModule({

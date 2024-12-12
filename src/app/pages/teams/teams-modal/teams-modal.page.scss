@@ -1,0 +1,74 @@
+ion-content {
+  padding: 1rem;
+
+  .leader-container {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    .leader-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+
+    .leader-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .leader-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .integrants-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .characters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .character-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
