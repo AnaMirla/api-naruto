@@ -47,9 +47,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/teams/teams.module').then(m => m.TeamsPageModule)
   },
   {
+    path: 'village',
+    loadChildren: () => import('./pages/village/village.module').then(m => m.VillagePageModule)
+  },
+  {
     path: '**',
     redirectTo: 'intro',
-  }
+  },
 ];
 
 @NgModule({

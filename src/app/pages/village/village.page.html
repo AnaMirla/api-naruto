@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Aldeas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="villages-container">
+    <div *ngFor="let village of villages" (click)="openModal(village)">
+      <ion-card>
+        <img [src]="village.symbol" alt="{{ village.name }}">
+        <ion-card-header>
+          <ion-card-title>{{ village.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Líder: {{ village.leader }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
