@@ -110,3 +110,12 @@ ion-icon{
 p{
     font-size: 1em;
 }
+
+ion-content {
+    padding-bottom: 60px; /* Ajusta el espacio para que no tape el footer */
+  }
+  
+  ion-footer {
+    padding-top: 20px;
+  }
+  

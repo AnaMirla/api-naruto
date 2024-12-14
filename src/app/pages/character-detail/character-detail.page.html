@@ -6,6 +6,7 @@
 
 <ion-content>
   
+  
   <div class="characters-container">
     <div class="character-card" *ngFor="let character of characters" (click)="openModal(character)">
       <img [src]="character.image || 'assets/characters/naruto.jpg'" alt="Imagen del personaje">
@@ -35,14 +36,6 @@
       <p>Estado: <span [class.dead]="character.status === 'Dead'">{{ character.status }}</span></p>
     </div>
   </div>
-
-  <!-- Botón que lleva a la página Home -->
-  <div class="div-container">
-    <ion-button routerLink="/home" fill="clear" expand="block">
-      Volver a Inicio
-    </ion-button>
-  </div>
-</ion-content>
 
 <ion-footer>
   <div class="footer">

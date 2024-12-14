@@ -5,63 +5,29 @@
 </ion-header>
 
 <ion-content>
-  <!-- Título principal -->
   <div class="div-container h1">
     <h1 class="permanent-marker-regular">API Naruto</h1>
   </div>
 
-  <!-- Contenedor de tarjetas -->
   <div class="div-container">
-    <div class="div-card">
+    <div class="div-card" *ngFor="let character of characters">
       <div class="card">
-        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
+        <img [src]="character.image" [alt]="character.name" />
         <div class="card-content">
-          <h2>Itama Senju</h2>
-          <p>🟥 Dead<br>Clan: Senju</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
-        <div class="card-content">
-          <h2>Seiren Funato</h2>
-          <p>🟥 Dead<br>Clan: Funato</p>
+          <h2>{{ character.name }}</h2>
+          <p>
+            {{ character.status === 'Alive' ? '🟩' : '🟥' }} {{ character.status }}<br />
+            Clan: {{ character.clan }}
+          </p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="div-container">
-    <div class="div-card">
-      <div class="card">
-        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
-        <div class="card-content">
-          <h2>Itama Senju</h2>
-          <p>🟥 Dead<br>Clan: Senju</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="assets/characters/naruto.jpg" alt="Imagen Personaje">
-        <div class="card-content">
-          <h2>Seiren Funato</h2>
-          <p>🟥 Dead<br>Clan: Funato</p>
-        </div>
-      </div>
+  <ion-footer>
+    <div class="footer">
+      <p>&copy; 2024 Naruto API. All rights reserved.</p>
+      <p>Powered by <a href="https://ionicframework.com/" target="_blank">Ionic</a></p>
     </div>
-  </div>
-
-  <!-- Botón para ir a la pantalla de introducción -->
-  <div class="div-container">
-    <ion-button routerLink="/character-detail" fill="clear" expand="block">
-      Ver Todos los Personajes
-    </ion-button>
-  </div>  
+  </ion-footer>
 </ion-content>
-
-<ion-footer>
-  <div class="footer">
-    <p>&copy; 2024 Naruto API. All rights reserved.</p>
-    <p>Powered by <a href="https://ionicframework.com/" target="_blank">Ionic</a></p>
-  </div>
-</ion-footer>

@@ -1,9 +1,8 @@
-/* Estilos generales */
 header {
   background: url(/assets/img/background2.gif);
-  background-size: cover; 
-  background-position: center; 
-  height: 200px; 
+  background-size: cover;
+  background-position: center;
+  height: 200px;
 }
 
 h1 {
@@ -13,56 +12,45 @@ h1 {
   color: black;
   margin-bottom: 20px;
   border-radius: 8px;
-  background: rgb(228, 151, 8);
-  font-family: "Permanent Marker", cursive;
-  width: 100%; 
-  box-sizing: border-box; 
   background-color: orangered;
+  font-family: "Permanent Marker", cursive;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Contenedor general */
 .div-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
-  width: 100%; 
-  box-sizing: border-box; 
-}
-
-/* Contenedor de tarjetas */
-.div-card {
-  display: flex;
-  flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  padding: 20px;
   max-width: 1200px;
+  margin: auto;
 }
 
-/* Tarjetas individuales */
 .card {
   background: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 220px; 
+  width: 200px;
+  height: 300px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagen dentro de la tarjeta */
 .card img {
   width: 100%;
-  height: auto; 
-  object-fit: cover;
+  height: 60%;
+  object-fit: contain; 
+  background-color: #f4f4f4;
 }
 
-/* Contenido de la tarjeta */
 .card-content {
   padding: 10px;
 }
@@ -78,7 +66,6 @@ h1 {
   margin: 4px 0;
 }
 
-/* Pie de página */
 .footer {
   padding: 20px;
   color: rgb(10, 10, 10);
