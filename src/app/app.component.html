@@ -1,3 +1,22 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- Menú lateral -->
+  <ion-menu content-id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menú Ninja</ion-title> <!-- Título sin fondo naranja -->
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Mostrar los botones para todas las páginas de forma independiente -->
+        <ion-item *ngFor="let page of appPages" [routerLink]="page.url" routerDirection="root">
+          <ion-icon [name]="page.icon" slot="start"></ion-icon>
+          {{ page.title }}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Contenedor principal donde se cargan las páginas -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
 </ion-app>

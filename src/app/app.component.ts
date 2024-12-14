@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  public appPages = [
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'Characters', url: '/character', icon: 'person' },
+    { title: 'Clans', url: '/clanes', icon: 'people' },
+    { title: 'Kekkei Genkai', url: '/kekkei-genkai', icon: 'leaf' },
+    { title: 'Tailed Beats', url: '/tailed-beats', icon: 'paw' },
+    { title: 'Teams', url: '/teams', icon: 'albums' },
+    { title: 'Village', url: '/village', icon: 'home' },
+    { title: 'Kara', url: '/kara', icon: 'people' },
+    { title: 'Akatsuki', url: '/akatsuki', icon: 'person' },
+  ];
 }

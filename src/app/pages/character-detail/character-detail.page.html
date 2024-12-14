@@ -1,12 +1,13 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>Characters Detail</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!-- Botón para abrir el menú -->
+    </ion-buttons>
+    <ion-title>Characters</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
-  
   <div class="characters-container">
     <div class="character-card" *ngFor="let character of characters" (click)="openModal(character)">
       <img [src]="character.image || 'assets/characters/naruto.jpg'" alt="Imagen del personaje">
