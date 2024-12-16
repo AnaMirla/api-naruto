@@ -1,18 +1,22 @@
 .characters-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas por fila */
+  grid-template-columns: repeat(4, minmax(200px, 1fr)); /* 4 columnas con tamaño mínimo de 200px */
   gap: 1rem; /* Espacio entre tarjetas */
   padding: 1rem; /* Espaciado interno del contenedor */
 }
 
 .character-card {
+  height: 300px; /* Altura fija para cada card */
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: center;
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #f9f9f9;
   transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &:hover {
     transform: scale(1.05);
@@ -20,10 +24,13 @@
   }
 
   img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 180px; /* Altura fija para la imagen */
+    object-fit: contain; /* Evita el recorte y mantiene proporciones */
+    object-position: center; /* Centra la imagen dentro del contenedor */
     border-radius: 4px;
     margin-bottom: 0.5rem;
+    background-color: #f0f0f0; /* Fondo gris claro para imágenes más pequeñas */
   }
 
   h3 {
@@ -61,4 +68,3 @@
 .footer a:hover {
   text-decoration: underline;
 }
-
