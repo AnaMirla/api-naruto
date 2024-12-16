@@ -1,10 +1,24 @@
 import { Component, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
+interface Clan {
+  name: string;
+  leader: string;
+  specialty: string;
+  image: string;
+}
+
+interface Character {
+  name: string;
+  role: string;
+  image: string;
+}
+
 interface Village {
   name: string;
   leader: string;
-  clans: { name: string; leader: string; specialty: string }[];
+  symbol: string;
+  characters: Character[];
 }
 
 @Component({

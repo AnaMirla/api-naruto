@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>{{ village.name }} - Clanes</ion-title>
+    <ion-title>{{ village.name }} - Personajes Destacados</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="dismissModal()">Cerrar</ion-button>
     </ion-buttons>
@@ -9,14 +9,14 @@
 
 <ion-content>
   <div class="clans-container">
-    <div *ngFor="let clan of village.clans">
+    <div *ngFor="let character of village.characters" class="clan-card">
       <ion-card>
+        <img [src]="character.image" alt="{{ character.name }}">
         <ion-card-header>
-          <ion-card-title>{{ clan.name }}</ion-card-title>
+          <ion-card-title>{{ character.name }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>Líder: {{ clan.leader }}</p>
-          <p>Especialidad: {{ clan.specialty }}</p>
+          <p>Rol: {{ character.role }}</p>
         </ion-card-content>
       </ion-card>
     </div>

@@ -6,7 +6,7 @@ interface Village {
   name: string;
   leader: string;
   symbol: string;
-  clans: { name: string; leader: string; specialty: string }[];
+  characters: { name: string; role: string; image: string }[];
 }
 
 @Component({
@@ -14,63 +14,64 @@ interface Village {
   templateUrl: './village.page.html',
   styleUrls: ['./village.page.scss'],
 })
-
 export class VillagePage {
   villages: Village[] = [
     {
       name: 'Konohagakure',
       leader: 'Hokage (Naruto Uzumaki)',
-      symbol: 'https://link-a-imagen-simbolo-konoha.com',
-      clans: [
-        { name: 'Uchiha', leader: 'Sasuke Uchiha', specialty: 'Sharingan' },
-        { name: 'Senju', leader: 'Tobirama Senju', specialty: 'Chakra de la naturaleza' },
-        { name: 'Hyuga', leader: 'Hiashi Hyuga', specialty: 'Byakugan' }
-      ]
+      symbol: './assets/aldeas/konohagakure/symbol_konohagakure.jpg',
+      characters: [
+        { name: 'Hiashi Hyuga', role: 'Líder del Clan Hyuga', image: './assets/aldeas/konohagakure/lider hyuga hiashi hyuga.jpg' },
+      ],
     },
     {
       name: 'Sunagakure',
       leader: 'Kazekage (Gaara)',
-      symbol: 'https://link-a-imagen-simbolo-sunagakure.com',
-      clans: [
-        { name: 'Kazekage Clan', leader: 'Rasa', specialty: 'Manipulación de arena' },
-        { name: 'Chikamatsu', leader: 'Monzaemon Chikamatsu', specialty: 'Títeres' }
-      ]
+      symbol: './assets/aldeas/sunagakure/sunagakure.jpg',
+      characters: [
+        { name: 'Gaara', role: 'Kazekage', image: './assets/aldeas/sunagakure/gaara.jpg' },
+        { name: 'Rasa', role: 'Cuarto Kazekage', image: './assets/aldeas/sunagakure/rasa.jpg' },
+        { name: 'Monzaemon', role: 'Inventor de Títeres', image: './assets/aldeas/sunagakure/monzaemon.png' },
+      ],
     },
     {
       name: 'Kirigakure',
       leader: 'Mizukage (Mei Terumi)',
-      symbol: 'https://link-a-imagen-simbolo-kirigakure.com',
-      clans: [
-        { name: 'Hozuki', leader: 'Suigetsu Hozuki', specialty: 'Transformación en agua' },
-        { name: 'Yuki', leader: 'Haku', specialty: 'Técnicas de hielo' }
-      ]
+      symbol: './assets/aldeas/kirigakure/kirigakure.jpg',
+      characters: [
+        { name: 'Haku', role: 'Ninja de hielo', image: './assets/aldeas/kirigakure/haku.jpg' },
+        { name: 'Mei Terumi', role: 'Mizukage', image: './assets/aldeas/kirigakure/mei terumi.jpg' },
+        { name: 'Suigetsu Hozuki', role: 'Espadachín', image: './assets/aldeas/kirigakure/suigetsu hozuki.jpg' },
+      ],
     },
     {
       name: 'Iwagakure',
       leader: 'Tsuchikage (Kurotsuchi)',
-      symbol: 'https://link-a-imagen-simbolo-iwagakure.com',
-      clans: [
-        { name: 'Kamizuru', leader: 'Shibi Kamizuru', specialty: 'Manipulación de abejas' },
-        { name: 'Kitsuchi Clan', leader: 'Kitsuchi', specialty: 'Técnicas de tierra' }
-      ]
+      symbol: './assets/aldeas/iwagakure/iwagakure.jpeg',
+      characters: [
+        { name: 'Kitsuchi', role: 'Comandante ninja', image: './assets/aldeas/iwagakure/kitsuchi.jpg' },
+        { name: 'Kurotsuchi', role: 'Tsuchikage', image: './assets/aldeas/iwagakure/kurotsuchi.jpg' },
+        { name: 'Shibi Kamizuru', role: 'Ninja de abejas', image: './assets/aldeas/iwagakure/shibi kamizuru.jfif' },
+      ],
     },
     {
       name: 'Kumogakure',
       leader: 'Raikage (Darui)',
-      symbol: 'https://link-a-imagen-simbolo-kumogakure.com',
-      clans: [
-        { name: 'Yotsuki', leader: 'A (Raikage)', specialty: 'Raiton' },
-        { name: 'Hachibi Jinchuriki', leader: 'Killer Bee', specialty: 'Control del Hachibi' }
-      ]
+      symbol: './assets/aldeas/kumogakure/kumogakure.jpeg',
+      characters: [
+        { name: 'A (Raikage)', role: 'Anterior Raikage', image: './assets/aldeas/kumogakure/a raikage.jfif' },
+        { name: 'Darui', role: 'Actual Raikage', image: './assets/aldeas/kumogakure/dsarui.png' },
+      ],
     },
     {
       name: 'Amegakure',
       leader: 'Líder (Nagato)',
-      symbol: 'https://link-a-imagen-simbolo-amegakure.com',
-      clans: [
-        { name: 'Clan desconocido', leader: 'Konan', specialty: 'Origami de papel' }
-      ]
-    }
+      symbol: './assets/aldeas/amegakure/amegakure.jpeg',
+      characters: [
+        { name: 'Konan', role: 'Segunda al mando', image: './assets/aldeas/amegakure/konan.png' },
+        { name: 'Nagato (Pain)', role: 'Líder de Akatsuki', image: './assets/aldeas/amegakure/nagato pain.jpg' },
+      ],
+    },
   ];
 
   constructor(private modalController: ModalController) {}
