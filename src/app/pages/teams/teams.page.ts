@@ -18,7 +18,7 @@ export class TeamsPage {
   teams: Team[] = [
     { 
       name: 'Team 7', 
-      image: 'assets/teams/equipo7.jpg', 
+      image: 'assets/teams/equipos/equipo 7/kakashi.jpg', 
       leader: 'Kakashi Hatake', 
       members: [
         { name: 'Naruto Uzumaki', image: 'assets/teams/naruto.jpg' },
@@ -28,92 +28,92 @@ export class TeamsPage {
     },
     {
       name: 'Team 10',
-      image: 'assets/teams/equipo10.jpg',
+      image: 'assets/teams/equipos/equipo 10/asuma.jpg',
       leader: 'Asuma Sarutobi',
       members: [
-        { name: 'Shikamaru Nara', image: 'assets/teams/shikamaru.jpg' },
-        { name: 'Choji Akimichi', image: 'assets/teams/choji.jpg' },
-        { name: 'Ino Yamanaka', image: 'assets/teams/ino.jpg' }
+        { name: 'Shikamaru Nara', image: 'assets/teams/equipos/equipo 10/shikamaru.jpg' },
+        { name: 'Choji Akimichi', image: 'assets/teams/equipos/equipo 10/choji.jpg' },
+        { name: 'Ino Yamanaka', image: 'assets/teams/equipos/equipo 10/ino.jpg' }
       ]
     },
     {
       name: 'Team 8',
-      image: 'assets/teams/equipo8.jpg',
+      image: 'assets/teams/equipos/equipo 8/kiba.jpg',
       leader: 'Kiba Inuzuka',
       members: [
-        { name: 'Kiba Inuzuka', image: 'assets/teams/kiba.jpg' },
-        { name: 'Hinata Hyuga', image: 'assets/teams/hinata.jpg' },
-        { name: 'Shino Aburame', image: 'assets/teams/shino.jpg' }
+        { name: 'Kiba Inuzuka', image: 'assets/teams/equipos/equipo 8/kiba.jpg' },
+        { name: 'Hinata Hyuga', image: 'assets/teams/equipos/equipo 8/hinata.jfif' },
+        { name: 'Shino Aburame', image: 'assets/teams/equipos/equipo 8/shino.jpg' }
       ]
     },
     {
       name: 'Team 5',
-      image: 'assets/teams/equipo5.jpg',
+      image: 'assets/teams/equipos/equipo 5/tsunade.jpeg',
       leader: 'Tsunade Senju',
       members: [
-        { name: 'Karin Uzumaki', image: 'assets/teams/karin.jpg' },
-        { name: 'Sasuke Uchiha', image: 'assets/teams/sasuke.jpg' },
-        { name: 'Sakura Haruno', image: 'assets/teams/sakura.jpg' }
+        { name: 'Karin Uzumaki', image: 'assets/teams/equipos/equipo 5/karin.jpg' },
+        { name: 'Sasuke Uchiha', image: 'assets/teams/equipos/equipo 5/sasuke.jpg' },
+        { name: 'Sakura Haruno', image: 'assets/teams/equipos/equipo 5/sakura.jpg' }
       ]
     },
     {
       name: 'Team 11',
-      image: 'assets/teams/equipo11.jpg',
+      image: 'assets/teams/equipos/equipo 11/killer bee.jpg',
       leader: 'Killer Bee',
       members: [
-        { name: 'Killer Bee', image: 'assets/teams/killerbee.jpg' },
-        { name: 'A', image: 'assets/teams/a.jpg' },
-        { name: 'Gai', image: 'assets/teams/gai.jpg' }
+        { name: 'Killer Bee', image: 'assets/teams/equipos/equipo 11/killer bee.jpg' },
+        { name: 'A', image: 'assets/teams/equipos/equipo 11/A.jpg' },
+        { name: 'Gai', image: 'assets/teams/equipos/equipo 11/Maito Gai.png' }
       ]
     },
     {
       name: 'Team 9',
-      image: 'assets/teams/equipo9.jpg',
+      image: 'assets/teams/equipos/equipo 9/sai.jpg',
       leader: 'Sai',
       members: [
-        { name: 'Naruto Uzumaki', image: 'assets/teams/naruto.jpg' },
-        { name: 'Sasuke Uchiha', image: 'assets/teams/sasuke.jpg' },
-        { name: 'Sakura Haruno', image: 'assets/teams/sakura.jpg' }
+        { name: 'Naruto Uzumaki', image: 'assets/teams/equipos/equipo 9/naruto.jpg' },
+        { name: 'Sasuke Uchiha', image: 'assets/teams/equipos/equipo 9/sasuke.jpg' },
+        { name: 'Sakura Haruno', image: 'assets/teams/equipos/equipo 9/sakura.jpg' }
       ]
     },
     {
       name: 'Team 6',
-      image: 'assets/teams/equipo6.jpg',
+      image: 'assets/teams/equipos/equipo 6/equipo6.png',
       leader: 'Might Guy',
       members: [
-        { name: 'Rock Lee', image: 'assets/teams/rocklee.jpg' },
-        { name: 'Neji Hyuga', image: 'assets/teams/neji.jpg' },
-        { name: 'Tenten', image: 'assets/teams/tenten.jpg' }
+        { name: 'Rock Lee', image: 'assets/teams/equipos/equipo 6/rock lee.jpg' },
+        { name: 'Neji Hyuga', image: 'assets/teams/equipos/equipo 6/neji.jpg' },
+        { name: 'Tenten', image: 'assets/teams/equipos/equipo 6/tenten.jpeg' }
       ]
     },
     {
       name: 'Team 12',
-      image: 'assets/teams/equipo12.jpg',
+      image: 'assets/teams/equipos/equipo 12/hanko.jpg',
       leader: 'Anko Mitarashi',
       members: [
-        { name: 'Karin Uzumaki', image: 'assets/teams/karin.jpg' },
-        { name: 'Sasuke Uchiha', image: 'assets/teams/sasuke.jpg' },
-        { name: 'Sakura Haruno', image: 'assets/teams/sakura.jpg' }
+        { name: 'Karin Uzumaki', image: 'assets/teams/equipos/equipo 12/karin.jpg' },
+        { name: 'Sasuke Uchiha', image: 'assets/teams/equipos/equipo 12/sasuke.jpg' },
+        { name: 'Sakura Haruno', image: 'assets/teams/equipos/equipo 12/sakura.jpg' }
       ]
     },
     {
       name: 'Team 13',
-      image: 'assets/teams/equipo13.jpg',
+      image: 'assets/teams/equipos/equipo 13/kabuto.jpg',
       leader: 'Kabuto Yakushi',
       members: [
-        { name: 'Kabuto Yakushi', image: 'assets/teams/kabuto.jpg' },
-        { name: 'Orochimaru', image: 'assets/teams/orochimaru.jpg' },
-        { name: 'Sasori', image: 'assets/teams/sasori.jpg' }
+        { name: 'Kabuto Yakushi', image: 'assets/teams/equipos/equipo 13/kabuto.jpg' },
+        { name: 'Orochimaru', image: 'assets/teams/equipos/equipo 13/oroshimaru.jfif' },
+        { name: 'Sasori', image: 'assets/teams/equipos/equipo 13/sasory.jpg' }
       ]
     },
     {
       name: 'Team 3',
-      image: 'assets/teams/equipo3.jpg',
+      image: 'assets/teams/equipos/equipo 3/sarutobi.jpg',
       leader: 'Hiruzen Sarutobi',
       members: [
-        { name: 'Tsunade Senju', image: 'assets/teams/tsunade.jpg' },
-        { name: 'Jiraiya', image: 'assets/teams/jiraiya.jpg' },
-        { name: 'Orochimaru', image: 'assets/teams/orochimaru.jpg' }
+        { name: 'Tsunade Senju', image: 'assets/teams/equipos/equipo 3/tsunade.jpeg' },
+        { name: 'Jiraiya', image: 'assets/teams/equipos/equipo 3/jiraiya.jpg' },
+        { name: 'Orochimaru', image: 'assets/teams/equipos/equipo 3/oroshimaru.jfif' }
       ]
     }
   ];
