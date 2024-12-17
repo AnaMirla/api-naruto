@@ -14,6 +14,7 @@ interface Village {
   templateUrl: './village.page.html',
   styleUrls: ['./village.page.scss'],
 })
+
 export class VillagePage {
   villages: Village[] = [
     {
