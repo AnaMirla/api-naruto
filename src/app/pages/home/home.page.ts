@@ -1,4 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { NarutoService } from '../../services/naruto.service';
+
+export interface Character {
+  name: string;
+  image: string;
+  status: string;
+  clan: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -6,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  characters = [
+  characters: Character[] = [
     { name: 'Naruto Uzumaki', image: 'assets/characters/naruto.jpg', status: 'Alive', clan: 'Uzumaki' },
     { name: 'Sasuke Uchiha', image: 'assets/characters/sasuke.jpg', status: 'Alive', clan: 'Uchiha' },
     { name: 'Sakura Haruno', image: 'assets/characters/sakura.jpg', status: 'Alive', clan: 'Haruno' },
@@ -19,7 +27,18 @@ export class HomePage implements OnInit {
     { name: 'Madara Uchiha', image: 'assets/characters/madara.jpg', status: 'Dead', clan: 'Uchiha' },
   ];
 
-  constructor() {}
+  constructor(private narutoService: NarutoService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // Intentamos cargar los datos de la API
+    this.narutoService.getCharacters().subscribe(
+      (data) => {
+        this.characters = data; // Si la API responde, reemplazamos los datos
+      },
+      (error) => {
+        console.error('Error al consumir la API', error);
+        // Si la API falla, seguimos mostrando los datos predeterminados
+      }
+    );
+  }
 }

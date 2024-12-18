@@ -23,6 +23,14 @@ describe('ModalClanPage', () => {
 
   it('should return the correct characters for the Uchiha clan', () => {
     component.clan = 'Uchiha';
-    expect(component.getCharacters()).toEqual(['Sasuke Uchiha', 'Itachi Uchiha']);
+    
+    // Asumiendo que getCharacters() devuelve una lista de objetos con 'name' e 'image'
+    const expectedCharacters = [
+      { name: 'Sasuke Uchiha', image: 'sasuke-image.jpg' },
+      { name: 'Itachi Uchiha', image: 'itachi-image.jpg' }
+    ];
+
+    // Aquí comparas los objetos completos
+    expect(component.getCharacters()).toEqual(expectedCharacters);
   });
 });
