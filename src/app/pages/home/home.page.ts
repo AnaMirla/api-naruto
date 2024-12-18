@@ -30,14 +30,12 @@ export class HomePage implements OnInit {
   constructor(private narutoService: NarutoService) {}
 
   ngOnInit() {
-    // Intentamos cargar los datos de la API
     this.narutoService.getCharacters().subscribe(
       (data) => {
-        this.characters = data; // Si la API responde, reemplazamos los datos
+        this.characters = data;
       },
       (error) => {
         console.error('Error al consumir la API', error);
-        // Si la API falla, seguimos mostrando los datos predeterminados
       }
     );
   }

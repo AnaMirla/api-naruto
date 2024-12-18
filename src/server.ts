@@ -4,7 +4,12 @@ import { Request, Response } from 'express';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'http://localhost:8100', // Cambia este valor al puerto que Ionic está usando
+  methods: 'GET, POST, PUT, DELETE',
+  allowedHeaders: 'Content-Type, Authorization'
+}));
+
 
 const PORT = 3000;
 
